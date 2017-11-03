@@ -11,7 +11,9 @@ for line in lines:
 	if '</span>' not in line:
 		if '</a>' not in line:
 			if 'choco' in line:
-				f1.write(line)
+				a = line.split('\n')[0]
+				a = a + ' -y' + '\n'
+				f1.write(a)
 				i += 1
 
 print i
